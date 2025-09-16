@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-border py-8">
+    <footer className="bg-background border-t border-border py-6">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Left side - Name and Copyright */}
@@ -13,14 +13,14 @@ export function Footer() {
                 Youssef Elkade
               </span>
             </h3>
-            <p className="text-sm text-muted-foreground absolute left-1/2 -translate-x-1/2 mt-6">
+            {/* <p className="text-sm text-muted-foreground absolute left-1/2 -translate-x-1/2 mt-6">
               © {new Date().getFullYear()} All rights reserved{" "}
-            </p>
+            </p> */}
           </div>
 
 
           {/* Center - Navigation Links */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-6 pb-5">
             {[
               { name: "Home", href: "#home" },
               { name: "About", href: "#about" },
@@ -70,6 +70,12 @@ export function Footer() {
             >
               <Mail className="w-5 h-5" />
             </a>
+          </div>
+          {/*Copyright */}
+          <div className="text-center">
+            <p className="text-sm text-muted-foreground absolute left-1/2 -translate-x-1/2 mt-3">
+              © {new Date().getFullYear()} All rights reserved{" "}
+            </p>
           </div>
         </div>
       </div>
