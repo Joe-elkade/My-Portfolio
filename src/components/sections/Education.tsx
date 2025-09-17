@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import {
   GraduationCap,
@@ -11,6 +12,7 @@ import {
   ExternalLink,
   User,
 } from "lucide-react";
+import { Global } from "recharts";
 
 const education = [
   {
@@ -39,7 +41,15 @@ const courses = [
     provider: "DEPI",
     category: "Web Development",
     icon: "🌐",
-    skills: ["ASP.NET Core", "Entity Framework", "Web APIs","HTML", "CSS", "JavaScript","Bootstrap"],
+    skills: [
+      "ASP.NET Core",
+      "Entity Framework",
+      "Web APIs",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+    ],
     status: "Ongoing",
   },
   {
@@ -47,7 +57,7 @@ const courses = [
     provider: "Almdrasa",
     category: "Front-end Development",
     icon: "💻",
-    skills: ["HTML", "CSS", "JavaScript", "React Framework","Python"],
+    skills: ["HTML", "CSS", "JavaScript", "React Framework", "Python"],
     status: "Ongoing",
   },
   {
@@ -55,7 +65,8 @@ const courses = [
     provider: "NTI",
     category: "Programming",
     icon: "🐍",
-    skills: ["Python", "Data Structures", "OOP","ML"],
+    skills: ["Python", "Data Structures", "OOP", "ML"],
+    liveUrl: "#",
   },
   {
     title: "Getting Started with Deep Learning",
@@ -63,6 +74,7 @@ const courses = [
     category: "AI/ML",
     icon: "🧠",
     skills: ["Neural Networks", "TensorFlow", "Deep Learning"],
+    liveUrl: "https://lnkd.in/p/e7wVkdYT",
   },
   {
     title: "C++ Fundamentals",
@@ -132,14 +144,15 @@ const courses = [
     provider: "Mohamed El Desouki",
     category: "Database",
     icon: "🗄️",
-    skills: ["SQL", "Database Design", "Query Optimization","SSMS"],
+    skills: ["SQL", "Database Design", "Query Optimization", "SSMS"],
   },
   {
     title: "Sprints X Microsoft Summer Camp - Web Development",
     provider: "Sprints",
     category: "Web Development",
     icon: "🌐",
-    skills: ["Python Basics", "Problem Solving", "HTML", "CSS","Git","GitHup"],
+    skills: ["Python Basics", "Problem Solving", "HTML", "CSS", "Git", "GitHup"],
+    liveUrl: "https://lnkd.in/p/ePD3BS2s",
   },
 ];
 
@@ -227,7 +240,10 @@ export function Education() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course, index) => (
-              <Card key={index} className="glass-card hover-lift group h-full">
+              <Card
+                key={index}
+                className="glass-card hover-lift group h-full flex flex-col"
+              >
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between">
                     <div className="text-2xl mb-2">{course.icon}</div>
@@ -249,16 +265,17 @@ export function Education() {
                   </div>
                 </CardHeader>
 
-                <CardContent className="pt-0">
-                  <Badge variant="outline" className="mb-4 text-xs">
+                <CardContent className="pt-0 flex flex-col flex-grow">
+                  {/* category badge */}
+                  <Badge variant="outline" className="mb-4 text-xs w-fit">
                     {course.category}
                   </Badge>
 
-                  <div>
+                  <div className="flex-grow">
                     <p className="text-sm text-muted-foreground mb-3">
                       Key Skills:
                     </p>
-                    <div className="flex flex-wrap gap-1">
+                    <div className="flex flex-wrap gap-1 mb-4">
                       {course.skills.map((skill, idx) => (
                         <Badge
                           key={idx}
@@ -270,6 +287,17 @@ export function Education() {
                       ))}
                     </div>
                   </div>
+
+                  {course.liveUrl && (
+                    <Button
+                      className="mt-auto bg-primary text-white hover:bg-primary/90 w-auto self-center"
+                      onClick={() => window.open(course.liveUrl, "_blank")}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      View Certification
+                    </Button>
+                    /*<Global className="w-4 h-4 mr-2" />*/
+                  )}
                 </CardContent>
               </Card>
             ))}
