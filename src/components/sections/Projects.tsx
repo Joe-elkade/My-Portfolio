@@ -17,6 +17,30 @@ import {
 
 const projects = [
   {
+    title: "On-Demand Delivery Platform",
+    description:
+      "Work-in-progress delivery platform similar to Talabat and Mrsool. Features include shopping cart, secure checkout, real-time order tracking, and multi-vendor support.",
+    category: "E-commerce Platform",
+    icon: Truck,
+    technologies: [
+      "ASP.NET Core",
+      "React",
+      "MongoDB",
+      "TypeScript",
+      "Stripe API",
+    ],
+    features: [
+      "Multi-vendor marketplace",
+      "Real-time order tracking",
+      "Secure payment processing",
+      "Shopping cart & checkout",
+      "Delivery route optimization",
+    ],
+    status: "WIP",
+    type: "DEPI Project",
+    liveUrl: "#",
+  },
+  {
     title: "PharmaCare Pharmacy",
     description:
       "A comprehensive Front-End system built for faculty project. Features inventory management, prescription tracking, sales analytics, and user authentication with role-based access control.",
@@ -59,30 +83,6 @@ const projects = [
     status: "Completed",
     type: "Frontend Project",
     liveUrl: "https://joe-elkade.github.io/Chef-Food-Restaurant/",
-  },
-  {
-    title: "On-Demand Delivery Platform",
-    description:
-      "Work-in-progress delivery platform similar to Talabat and Mrsool. Features include shopping cart, secure checkout, real-time order tracking, and multi-vendor support.",
-    category: "E-commerce Platform",
-    icon: Truck,
-    technologies: [
-      "ASP.NET Core",
-      "React",
-      "MongoDB",
-      "TypeScript",
-      "Stripe API",
-    ],
-    features: [
-      "Multi-vendor marketplace",
-      "Real-time order tracking",
-      "Secure payment processing",
-      "Shopping cart & checkout",
-      "Delivery route optimization",
-    ],
-    status: "WIP",
-    type: "DEPI Project",
-    liveUrl: "#",
   },
 ];
 

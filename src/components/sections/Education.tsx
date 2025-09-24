@@ -37,6 +37,14 @@ const education = [
 
 const courses = [
   {
+    title: "Almdrasa Programming and Front-end Diploma",
+    provider: "Almdrasa",
+    category: "Front-end Development",
+    icon: "💻",
+    skills: ["HTML", "CSS", "JavaScript", "React Framework", "Python"],
+    status: "Ongoing",
+  },
+  {
     title: "Software Development - Full Stack .NET Web Developer",
     provider: "DEPI",
     category: "Web Development",
@@ -53,20 +61,12 @@ const courses = [
     status: "Ongoing",
   },
   {
-    title: "Almdrasa Programming and Front-end Diploma",
-    provider: "Almdrasa",
-    category: "Front-end Development",
-    icon: "💻",
-    skills: ["HTML", "CSS", "JavaScript", "React Framework", "Python"],
-    status: "Ongoing",
-  },
-  {
     title: "Programming using Python",
     provider: "NTI",
     category: "Programming",
     icon: "🐍",
     skills: ["Python", "Data Structures", "OOP", "ML"],
-    liveUrl: "#",
+    liveUrl: "https://www.linkedin.com/posts/activity-7376176760729784320-fVEf",
   },
   {
     title: "Getting Started with Deep Learning",
@@ -76,7 +76,7 @@ const courses = [
     skills: ["Neural Networks", "TensorFlow", "Deep Learning"],
     liveUrl: "https://lnkd.in/p/e7wVkdYT",
   },
-  {
+  /*{
     title: "C++ Fundamentals",
     provider: "Elzero Web School",
     category: "Programming",
@@ -145,7 +145,7 @@ const courses = [
     category: "Database",
     icon: "🗄️",
     skills: ["SQL", "Database Design", "Query Optimization", "SSMS"],
-  },
+  },*/
   {
     title: "Sprints X Microsoft Summer Camp - Web Development",
     provider: "Sprints",
